@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para María Isabel Fuentes</title>
+    <link rel="icon" href="Recursos/logo.ico" type="image/x-icon"> <!-- Logo agregado -->
+    <style>
+        @keyframes shine {
+            0% {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff6f61, 0 0 30px #ff6f61, 0 0 40px #ff6f61, 0 0 50px #ff6f61, 0 0 75px #ff6f61;
+            }
+            50% {
+                text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #ff6f61, 0 0 15px #ff6f61, 0 0 20px #ff6f61, 0 0 30px #ff6f61, 0 0 50px #ff6f61;
+            }
+            100% {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff6f61, 0 0 30px #ff6f61, 0 0 40px #ff6f61, 0 0 50px #ff6f61, 0 0 75px #ff6f61;
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            color: #4a4a4a;
+        }
+        header {
+            text-align: center;
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px 0;
+            animation: shine 3s infinite;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: shine 3s infinite;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            color: #ff6f61;
+            text-align: center;
+            animation: shine 3s infinite;
+        }
+        .container p {
+            line-height: 1.6;
+            text-align: justify;
+            animation: shine 3s infinite;
+        }
+        .heart {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .heart img {
+            width: 150px;
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            max-width: 800px;
+            height: 200px; /* Altura fija para las imágenes */
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .carousel-images {
+            display: flex;
+            animation: slide 30s linear infinite; /* Animación continua */
+        }
+        .carousel-images img {
+            width: auto;
+            height: 100%;
+            flex-shrink: 0;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 5px;
+        }
+        @keyframes slide {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #ff6f61;
+            color: white;
+            animation: shine 3s infinite;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Para La Mujer Más Hermosa Del Mundo</h1>
+    </header>
+    <div class="container">
+        <h2>Hola, mi vida</h2>
+        <p>
+            Quiero dedicarte este pequeño espacio en el que puedo expresar cuánto significas para mí,  
+            deveras usted me ah cambiado, y eso lo agradezco un monton, usted me creo una hermosa  
+            carta, y yo le creo esta hermosa página tan hermosa como usted, la cual le pertenece, xq 
+            así, puedo demostrar que usted es espacial para mi vida lo más especial que pude haber tenido. 
+        </p>
+        <div class="heart">
+            <img src="https://i.pinimg.com/originals/f8/f4/cb/f8f4cbaf19fe53d19c477b6d2703bd18.gif" alt="Corazón">
+        </div>
+        <p>
+            Eres mi inspiración, mi compañera y mi mayor alegría. Gracias por ser quien eres: increíble,  
+            hermosa y única. Siempre estaré aquí para usted mi vida, xq usted es mi princesa, y como toda 
+            princesa debe ser protegida por lo que aquí estaré, apoyándola y amándola en cada paso del 
+            camino. Este pequeño detalle es solo una manera más de recordarte lo especial que eres para mí.
+        </p>
+        <p style="text-align: center; font-weight: bold; margin: 20px 0;">
+            💖Y NO LA PIENSO CAMBIAR X NADA DEL MUNDO, XQ TU ERES MI MUNDO MVD💖
+        </p>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="juntos2.jpeg" alt="juntos2">
+                <img src="camisa1.jpeg" alt="camisa">
+                <img src="pulseras.jpeg" alt="pulseras">
+                <img src="juntos3.jpeg" alt="juntos3">
+                <img src="juntos4.jpeg" alt="juntos4">
+                <img src="camisa2.jpeg" alt="camisa2">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>De Parte De Tu Novio: Alejandro</p>
+    </footer>
+    <script>
+        // Aseguramos que el carrusel continúe repitiéndose correctamente
+        const carousel = document.querySelector('.carousel-images');
+        const images = carousel.querySelectorAll('img');
+        const totalImages = images.length;
+
+        // Clonar imágenes al final para un deslizamiento continuo
+        images.forEach(img => {
+            const clone = img.cloneNode(true);
+            carousel.appendChild(clone);
+        });
+    </script>
+</body>
+</html>
